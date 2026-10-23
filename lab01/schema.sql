@@ -1,3 +1,5 @@
+BEGIN;
+
 CREATE TABLE IF NOT EXISTS users (
     id BIGINT PRIMARY KEY,
     full_name TEXT NOT NULL,
@@ -124,3 +126,5 @@ CREATE TABLE IF NOT EXISTS reviews (
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     UNIQUE (user_id, product_id)
 );
+
+END;
